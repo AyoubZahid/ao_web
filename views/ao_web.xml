@@ -4,16 +4,14 @@
 <openerp>
 	<data>
 		
-		<template id="assets_frontend" inherit_id="web.assets_common">
+		<template id="assets_frontend"  name="ao_web_assets" inherit_id="web.assets_common">
 			<xpath expr="." position="inside">
+
 				<script type="text/javascript" src="/ao_web/static/lib/webix/webix.js"></script>
-				<link rel="stylesheet" href="/ao_web/static/lib/webix/css/metro.css" />
-				<link rel="stylesheet" href="/ao_web/static/src/css/ao_web.css" />
-				
 				<script type="text/javascript" src="/ao_web/static/src/js/main.js"></script>
 				<script type="text/javascript" src="/ao_web/static/src/js/widgets.js"></script>
 			</xpath>
 		</template>
-		
+
 	</data>
 </openerp>

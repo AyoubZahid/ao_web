@@ -14,5 +14,32 @@ function openerp_aoweb_widgets(instance, module) {
             this.$el.addClass('oe_hidden');
         },
     });
+    
+    module.ButtonWidget = module.BaseWidget.extend({
+        template: 'Button',
+        init: function(parent, options){
+            options = options || {};
+            this._super(parent, options);
+            this.action = options.action;
+            this.label  = options.label;
+            this.icon   = options.icon;
+        },
+        renderElement: function(){
+            var self = this;
+            this._super();
+            if(this.action){
+                this.$el.click(function(){
+                    self.action();
+                });
+            }
+        },
+    });
+    
+    module.ListWidget = module.BaseWidget.extend({
+        show: function(){
+        	var self = this;
+        	this._super();
+        },
+    });    
 
 }; 

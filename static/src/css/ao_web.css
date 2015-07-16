@@ -1,0 +1,29 @@
+/*  header buttons */
+
+.header-button{
+    float: left;
+    height: 48px;
+    padding-left: 16px;
+    padding-right: 16px;
+    border-left: 1px solid #292929;
+    color: #DDD;
+    line-height: 48px;
+    text-align: center;
+    cursor: pointer;
+
+    -webkit-transition-property: background;
+    -webkit-transition-duration: 0.2s;
+    -webkit-transition-timing-function: ease-out;
+}
+.header-button:last-child{
+    border-right:  1px solid #3a3a3a;
+}
+.header-button:active{
+    background: rgba(0,0,0,0.2);
+    color:#EEE;
+}
+.header-button.confirm {
+    background: #359766;
+    color: white;
+    font-weight: bold;
+}
