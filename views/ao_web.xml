@@ -7,9 +7,19 @@
 		<template id="assets_frontend"  name="ao_web_assets" inherit_id="web.assets_common">
 			<xpath expr="." position="inside">
 
-				<script type="text/javascript" src="/ao_web/static/lib/webix/webix.js"></script>
+				<script type="text/javascript" src="/ao_web/static/lib/metro.min.js"></script>
 				<script type="text/javascript" src="/ao_web/static/src/js/main.js"></script>
 				<script type="text/javascript" src="/ao_web/static/src/js/widgets.js"></script>
+				<script type="text/javascript" src="/ao_web/static/src/js/screens.js"></script>
+				<!-- Metro CSS -->
+				<!-- <link rel="stylesheet" href="/ao_web/static/src/fonts/metro/stylesheet.css" />  -->
+				<link rel="stylesheet" href="/ao_web/static/lib/metro.min.css" />
+				<link rel="stylesheet" href="/ao_web/static/lib/metro-responsive.min.css" />
+				<link rel="stylesheet" href="/ao_web/static/lib/metro-icons.min.css" />
+				<link rel="stylesheet" href="/ao_web/static/lib/metro-schemes.min.css" />	
+				<link rel="stylesheet" href="/ao_web/static/lib/metro-colors.min.css" />
+				<link rel="stylesheet" href="/ao_web/static/lib/metro-rtl.min.css" />	
+				<!-- ********* -->
 			</xpath>
 		</template>
 

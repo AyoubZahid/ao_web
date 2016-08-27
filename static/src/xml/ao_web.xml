@@ -1,10 +1,75 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <templates id="template" xml:space="preserve">
 	
-    <t t-name="Button">
-        <div class="header-button">
+    <t t-name="AOButton">
+        <div t-att-class=" 'app-bar-element ' + (widget.rightalign  ? 'place-right ' : '')">
             <t t-esc="widget.label" />
         </div>
     </t>
+    
+    
+    <!-- Popup Widgets -->
+    <t t-name="AOErrorPopup">
+        <div class="aomodal-dialog">
+            <div class="aopopup popup-error">
+                <p class="message"><t t-esc=" widget.message || 'Error' " /></p>
+                <p class="comment"><t t-esc=" widget.comment || '' "/></p>
+                <div class="footer">
+                    <div class="button">
+                        Ok
+                    </div>
+                </div>
+            </div>
+        </div>
+    </t>
+    <t t-name="AOErrorTracebackPopup">
+        <div class="aomodal-dialog">
+            <div class="aopopup popup-error">
+                <p class="message"><t t-esc=" widget.message || 'Error' " /></p>
+                <p class="comment traceback"><t t-esc=" widget.comment || '' "/></p>
+                <div class="footer">
+                    <div class="button">
+                        Ok
+                    </div>
+                </div>
+            </div>
+        </div>
+    </t>
+    <t t-name="AOConfirmPopup">
+        <div class="aomodal-dialog">
+            <div class="aopopup popup-confirm">
+                <p class="message"><t t-esc=" widget.message || 'Confirm ?' " /></p>
+                <p class="comment"><t t-esc=" widget.comment || '' "/></p>
+                <div class="footer">
+                    <div class="button confirm">
+                        Confirm 
+                    </div>
+                    <div class="button cancel">
+                        Cancel 
+                    </div>
+                </div>
+            </div>
+        </div>
+    </t>
 
+	<!-- ActionBar Widgets -->
+    <t t-name="AOActionBarWidget">
+        <div class="ao-actionbar">
+            <ul class="ao-actionbar-button-list">
+            </ul>
+        </div>
+    </t>
+    <t t-name="AOActionButtonWidget">
+        <li t-att-class=" 'shortcut-button bg-cyan bg-active-darkBlue fg-white'+ (widget.rightalign  ? 'place-right ' : '') + (widget.disabled ? 'disabled ' : '')">
+            <div class='iconlabel'>
+                <t t-esc="widget.label" />
+            </div>
+        </li>
+    </t>
+    <t t-name="AOActionButtonWidgetWithIcon">
+        <li t-att-class=" 'shortcut-button bg-cyan bg-active-darkBlue fg-white'+ (widget.rightalign  ? 'place-right ' : '') + (widget.disabled ? 'disabled ' : '')">
+            <span t-att-class="'icon '+widget.icon" ></span>
+            <span class="title"><t t-esc="widget.label" /></span>
+        </li>
+    </t>
 </templates>
