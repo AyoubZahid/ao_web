@@ -91,7 +91,12 @@ function openerp_aoweb_screens(instance, module){
             }
         },
         get_current_screen_param: function(param){
-            return this.params ? this.params[param] : undefined;
+        	if(param){
+        		return this.params ? this.params[param] : undefined;
+        	}else{
+        		return this.params ? this.params : undefined;
+        	}
+            
         },
         set_default_screen: function(){
             this.set_current_screen(this.default_screen);
