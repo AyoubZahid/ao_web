@@ -107,7 +107,12 @@ function openerp_aoweb_screens(instance, module){
 	
     //**** popups ****
     module.PopUpWidget = module.BaseWidget.extend({
-        show: function(){
+        showDialog: function(id){
+	        var dialog = $(id).data('dialog');
+	        dialog.open();
+	    },
+        show: function(options){
+        	console.log(options);
             if(this.$el){
                 this.$el.removeClass('oe_hidden');
             }
