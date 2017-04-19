@@ -117,8 +117,8 @@ function openerp_aoweb_screens(instance, module){
                 this.$el.removeClass('oe_hidden');
             }
         },
-        /* called before hide, when a popup is closed */
         close: function(){
+        	this.hide();
         },
         hide: function(){
             if(this.$el){
